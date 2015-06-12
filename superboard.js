@@ -208,7 +208,7 @@
             updateLayout();
             if (root_url !== undefined) {
                 var protocol = window.location.href.split(':')[0];
-                var url = root_url + "api/json?tree=*,jobs[name,color,url,lastStableBuild[id],builds[id,culprits[fullName]]]";
+                var url = root_url + "api/json?tree=*,jobs[name,color,url,lastStableBuild[timestamp],builds[timestamp,culprits[fullName]]]";
                 if (protocol === "file") {
                     url = url + '&jsonp=?';
                 }
@@ -288,7 +288,7 @@
                                         registerItem['lastok'].text('');
                                     } else {
                                         if ((job.lastStableBuild !== undefined) && (job.lastStableBuild !== null)) {
-                                            registerItem['lastok'].text(moment(job.lastStableBuild.id,"YYYY-MM-DD_HH-mm-ss",'fr').fromNow());
+                                            registerItem['lastok'].text(moment(job.lastStableBuild.timestamp).fromNow());
                                         } else {
                                             registerItem['lastok'].text('Jamais !!');
                                         }
@@ -302,7 +302,7 @@
                                 for (indexBuild = 0, _len = job.builds.length; indexBuild < _len; indexBuild++) {
                                     var item = job.builds[indexBuild];
                                     
-                                    if ((job.lastStableBuild === undefined) || (job.lastStableBuild === null) || (item.id > job.lastStableBuild.id)) {
+                                    if ((job.lastStableBuild === undefined) || (job.lastStableBuild === null) || (item.timestamp > job.lastStableBuild.timestamp)) {
                                         for (indexCulprit = 0; indexCulprit < item.culprits.length; indexCulprit++) {
                                             var culprit = item.culprits[indexCulprit].fullName;
                                             if (__indexOf.call(culprits, culprit) < 0) {
