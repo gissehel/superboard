@@ -1,0 +1,305 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:800&subset=latin,latin-ext);
+
+/* Positions */
+
+.body {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+}
+.workspace {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+
+.pad-outter {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+
+.pad {
+    position: absolute;
+    display: block;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 0px;
+    
+    font-family: 'Calibri', 'Trebuchet MS', 'Liberation Sans', 'FreeSans', 'sans-serif';
+    font-weight: bold;
+    color: white;
+}
+
+.title {
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.lastok, .extra {
+    text-align: center;
+}
+
+.culprits {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(64,64,64,0.3);
+    position: absolute;
+    text-align: center;
+    padding: 0px 5px;
+    border-top: 1px solid rgba(64,64,64,0.8);
+    border-bottom: 1px solid rgba(64,64,64,0.8);
+}
+
+.overlay-message {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.big-message {
+    position: absolute;
+    
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    height: 270px;
+
+    text-align: center;
+    color: white;
+    font-size: 180px;
+    font-family: "Open Sans", sans-serif;
+    text-shadow:
+        3px 3px 0 black,
+        3px 2px 0 black,
+        3px 1px 0 black,
+        3px 0px 0 black,
+        3px -1px 0 black,
+        3px -2px 0 black,
+        3px -3px 0 black,
+        2px -3px 0 black,
+        1px -3px 0 black,
+        0px -3px 0 black,
+        -1px -3px 0 black,
+        -2px -3px 0 black,
+        -3px -3px 0 black,
+        -3px -2px 0 black,
+        -3px -1px 0 black,
+        -3px 0px 0 black,
+        -3px 1px 0 black,
+        -3px 2px 0 black,
+        -3px 3px 0 black,
+        -2px 3px 0 black,
+        -1px 3px 0 black,
+        0px 3px 0 black,
+        1px 3px 0 black,
+        2px 3px 0 black;
+}
+
+/* Colors */
+
+.pad {
+    background: #eee;
+}
+.none {
+    background: none;
+}
+.ok  {
+    background: #58c053;
+}
+.error {
+    background: #da4922;
+}
+.warn {
+    background: #d6b600;
+}
+.aborted {
+    background: #888;
+}
+
+.active {
+    opacity: 0.5;
+}
+
+.link  {
+    cursor: pointer;
+}
+
+/* Width / Height / Size */
+
+/* lay-5x3 */
+
+.layout-5x3 .pad-outter {
+    width: 20%;
+    height: 33%;
+}
+
+.layout-5x3 .pad {
+    font-size: 25px;
+    padding: 15px;
+}
+
+.layout-5x3 .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.layout-5x3 .lastok, .layout-5x3 .extra {
+    font-size: 30px;
+}
+
+.layout-5x3 .mini {
+    width: 10%;
+    height: 16.6%;
+}
+
+.layout-5x3 .mini .pad {
+    font-size: 18px;
+    padding: 6px;
+}
+
+.layout-5x3 .mini .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.layout-5x3 .mini .lastok , .layout-5x3 .mini .extra{
+    font-size: 18px;
+}
+
+/* lay-6x4 */
+
+.layout-6x4 .pad-outter {
+    width: 16.667%;
+    height: 25%;
+}
+
+.layout-6x4 .pad {
+    font-size: 23px;
+    padding: 10px;
+}
+
+.layout-6x4 .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.layout-6x4 .lastok , .layout-6x4 .extra{
+    font-size: 25px;
+}
+
+.layout-6x4 .mini {
+    width: 8.333%;
+    height: 12.55%;
+}
+
+.layout-6x4 .mini .pad {
+    padding: 6px;
+    font-size: 11px;
+}
+
+.layout-6x4 .mini .title {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.layout-6x4 .mini .lastok , .layout-6x4 .mini .extra{
+    font-size: 14px;
+}
+
+/* lay-7x5 */
+
+.layout-7x5 .pad-outter {
+    width: 14.28%;
+    height: 20%;
+}
+
+.layout-7x5 .pad {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.layout-7x5 .title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.layout-7x5 .lastok, .layout-7x5 .extra {
+    font-size: 22px;
+}
+
+.layout-7x5 .mini {
+    width: 7.14%;
+    height: 10.03%;
+}
+
+.layout-7x5 .mini .pad {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.layout-7x5 .mini .title {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+.layout-7x5 .mini .lastok , .layout-7x5 .mini .extra{
+    font-size: 12px;
+}
+
+/* lay-8x5 */
+
+.layout-8x5 .pad-outter {
+    width: 12.5%;
+    height: 20%;
+}
+
+.layout-8x5 .pad {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.layout-8x5 .title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.layout-8x5 .lastok, .layout-8x5 .extra {
+    font-size: 22px;
+}
+
+.layout-8x5 .mini {
+    width: 6.25%;
+    height: 10.03%;
+}
+
+.layout-8x5 .mini .pad {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.layout-8x5 .mini .title {
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+.layout-8x5 .mini .lastok , .layout-8x5 .mini .extra{
+    font-size: 12px;
+}
